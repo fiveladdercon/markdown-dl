@@ -1,0 +1,72 @@
+<h2>Definition Lists</h2>
+
+<h3>Rationale</h3>
+
+<p>Here are two reasons to support definition lists:</p>
+
+<ul>
+<li>Documenting command line switches, and</li>
+<li>Documenting function call arguments.</li>
+</ul>
+
+<p>Of course there are probably other reasons as well.</p>
+
+<h3>Syntax</h3>
+
+<p>The following demonstrates the syntax of the definition list:</p>
+
+<dl>
+<dt>Term</dt>
+<dd><p>Definition.</p></dd>
+<dt>Definition Marker</dt>
+<dd><p>The definition marker is the colon (<code>:</code>), followed by the 
+equals symbol (<code>=</code>).  This delimiter was chosen because it is the mathematical
+symbol for definition and is, in all likelihood, an uncommon symbol in the 
+vast amount of markdown in the ether, hence making this addition, for <em>most</em> 
+markdown, backwards compatible.</p></dd>
+<dt>Terms &amp; Definitions</dt>
+<dd><p>Terms and definitions may have multiple words, and definitions may carry onto 
+subsequent lines.  The term is anything before the definition marker on a line,
+while the definition is anything after the marker that ends in two newlines 
+followed by either a new term (which is a line with a definition marker) or a 
+non-indented string.  </p>
+
+<p>Note that with this specification, terms must be a single line, while 
+definitions may have multiple paragraphs.  And like ordered and unordered lists, 
+definitions that have multiple paragraphs need only to have the first line of 
+the paragraph indented.</p>
+
+<p>Two other things to note are that:</p>
+
+<ol>
+<li>the first paragraph of the definition can be separated from the term one or 
+two newlines if that's clearer; and</li>
+<li>definitions may also have embedded lists.</li>
+</ol></dd>
+</dl>
+
+<h2>Examples</h2>
+
+<h3>Command Line Switches</h3>
+
+<p>The following are some options from the <code>ls</code> command:</p>
+
+<dl>
+<dt>-a, --all</dt>
+<dd><p>do not ignore entries with .</p></dd>
+<dt>-A, --almost-all</dt>
+<dd><p>do not list implied . and ..</p></dd>
+<dt>--author</dt>
+<dd><p>with -l, print the author of each file</p></dd>
+</dl>
+
+<h3>Function Arguments</h3>
+
+<p>The following are the arguments to the C <code>main</code> function :</p>
+
+<dl>
+<dt>int argc</dt>
+<dd><p>the number of command line arguments</p></dd>
+<dt>char **argv</dt>
+<dd><p>the list of command line arguments</p></dd>
+</dl>

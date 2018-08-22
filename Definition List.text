@@ -1,0 +1,72 @@
+
+Definition Lists
+----------------
+
+### Rationale
+
+Here are two reasons to support definition lists:
+
+- Documenting command line switches, and
+- Documenting function call arguments.
+
+Of course there are probably other reasons as well.
+
+### Syntax
+
+The following demonstrates the syntax of the definition list:
+
+Term := Definition.
+
+Definition Marker := The definition marker is the colon (`:`), followed by the 
+  equals symbol (`=`).  This delimiter was chosen because it is the mathematical
+  symbol for definition and is, in all likelihood, an uncommon symbol in the 
+  vast amount of markdown in the ether, hence making this addition, for *most* 
+  markdown, backwards compatible.
+
+Terms & Definitions := 
+
+  Terms and definitions may have multiple words, and definitions may carry onto 
+subsequent lines.  The term is anything before the definition marker on a line,
+while the definition is anything after the marker that ends in two newlines 
+followed by either a new term (which is a line with a definition marker) or a 
+non-indented string.  
+
+  Note that with this specification, terms must be a single line, while 
+definitions may have multiple paragraphs.  And like ordered and unordered lists, 
+definitions that have multiple paragraphs need only to have the first line of 
+the paragraph indented.
+
+  Two other things to note are that:
+
+  1. the first paragraph of the definition can be separated from the term one or 
+     two newlines if that's clearer; and
+  2. definitions may also have embedded lists.
+
+
+Examples
+--------
+
+
+### Command Line Switches
+
+The following are some options from the `ls` command:
+
+-a, --all :=  
+  do not ignore entries with .
+
+-A, --almost-all :=
+  do not list implied . and ..
+
+--author :=
+  with -l, print the author of each file
+
+
+### Function Arguments
+
+The following are the arguments to the C `main` function :
+
+int argc :=
+  the number of command line arguments
+
+char **argv :=
+  the list of command line arguments
